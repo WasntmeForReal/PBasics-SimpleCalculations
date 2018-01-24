@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KonzolenKonvertor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            decimal money = decimal.Parse(Console.ReadLine());
+            string inCurrency = (Console.ReadLine());
+            string outCurrency = (Console.ReadLine());
+
+            decimal BGN = 1m;
+            decimal USD = 1.79549m;
+            decimal EUR = 1.95583m;
+            decimal GBP = 2.53405m;
+
+            decimal convertedCurrency = 0;
+
+            if (inCurrency == "BGN")
+            {
+                if (outCurrency == "USD")
+                {
+                    convertedCurrency = money * (BGN / USD);
+
+                }
+                else if (outCurrency == "EUR")
+                {
+                    convertedCurrency = money * (BGN / EUR);
+                }
+                else if (outCurrency == "GBP")
+                {
+                    convertedCurrency = money * (BGN / GBP);
+                }
+                else if (outCurrency == "BGN")
+                {
+                    convertedCurrency = money * (BGN / BGN);
+                }
+
+            }
+
+            else if (inCurrency == "USD")
+            {
+                if (outCurrency == "USD")
+                {
+                    convertedCurrency = money * (USD / USD);
+
+                }
+                else if (outCurrency == "EUR")
+                {
+                    convertedCurrency = money * (USD / EUR);
+                }
+                else if (outCurrency == "GBP")
+                {
+                    convertedCurrency = money * (USD / GBP);
+                }
+                else if (outCurrency == "BGN")
+                {
+                    convertedCurrency = money * (USD / BGN);
+                }
+
+            }
+
+            else if (inCurrency == "EUR")
+            {
+                if (outCurrency == "USD")
+                {
+                    convertedCurrency = money * (EUR / USD);
+
+                }
+                else if (outCurrency == "EUR")
+                {
+                    convertedCurrency = money * (EUR / EUR);
+                }
+                else if (outCurrency == "GBP")
+                {
+                    convertedCurrency = money * (EUR / GBP);
+                }
+                else if (outCurrency == "BGN")
+                {
+                    convertedCurrency = money * (EUR / BGN);
+                }
+
+            }
+
+            else if (inCurrency == "GBP")
+            {
+                if (outCurrency == "USD")
+                {
+                    convertedCurrency = money * (GBP / USD);
+
+                }
+                else if (outCurrency == "EUR")
+                {
+                    convertedCurrency = money * (GBP / EUR);
+                }
+                else if (outCurrency == "GBP")
+                {
+                    convertedCurrency = money * (GBP / GBP);
+                }
+                else if (outCurrency == "BGN")
+                {
+                    convertedCurrency = money * (GBP / BGN);
+                }
+
+            }
+
+            Console.WriteLine("{0:F2} {1}",convertedCurrency,outCurrency);
+        }
+    }
+}
